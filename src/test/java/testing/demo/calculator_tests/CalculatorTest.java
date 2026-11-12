@@ -93,6 +93,12 @@ public class CalculatorTest {
 		assertThrows(IllegalArgumentException.class, () -> calculator.divide(10, 0));
 	}
 	
+	@Test
+	public void divide_twoNumbers() {
+		Calculator calculator = new Calculator();
+		assertEquals(5, calculator.divide(10, 2));
+	}
+	
 	@AfterEach
 	void afterEachTest(TestInfo testInfo) {
 		System.out.printf("[After Each] Finished Test #%d: %s\n\n", count, testInfo.getDisplayName());
